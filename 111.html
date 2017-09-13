@@ -1,0 +1,44 @@
+<html>
+<body>
+
+	<script>
+	var isDown;
+    function up(){
+    isDown=0;
+	ctx.fillStyle = '#292d2d';
+		ctx.fillRect(event.offsetX, event.offsetY, 5, 5);;
+}
+function down(){
+    isDown=1;
+	ctx.fillStyle = '#292d2d';
+		ctx.fillRect(event.offsetX, event.offsetY, 5, 5);;
+}
+function move(){
+    if (isDown==1){
+	ctx.fillStyle = '#292d2d';
+		ctx.fillRect(event.offsetX, event.offsetY, 5, 5);;}
+}
+	</script>
+	
+	<canvas id='111' height='1000' width='1000'>
+		<script>
+			var canvas = document.getElementById('111');
+			var ctx = canvas.getContext('2d');
+			canvas.addEventListener('mousedown', down);
+			canvas.addEventListener('mousemove', move);
+			canvas.addEventListener('mouseup', up);
+			ctx.fillStyle = '#bb0000';
+			ctx.fillRect(100,100, 200,150);
+			var arr = new Array(100);
+			for (i=0; i<100;i++) {
+				if (i<=50 || i>=80)	arr[i]=1;
+				else arr[i]=0;
+			}
+			ctx.fillStyle='#aa0000';
+			for (i=0;i<100;i++){
+				if (arr[i]==1) ctx.fillRect(i,i,2,2);
+			}
+		</script>
+	</canvas>
+</body>
+</html>

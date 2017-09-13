@@ -1,0 +1,54 @@
+<html>
+<body>
+
+	<script>
+    function up(event){
+    ctx.beginPath();
+    ctx.moveTo(17,16);
+    ctx.lineTo(21,16);
+    ctx.lineTo(21,17);
+    ctx.lineTo(25,17);
+    ctx.lineTo(25,19);
+    ctx.lineTo(21,19);
+    ctx.lineTo(21,20);
+    ctx.lineTo(22,20);
+    ctx.lineTo(22,21);
+    ctx.lineTo(24,21);
+    ctx.lineTo(24,23);
+    ctx.lineTo(25,23);
+    ctx.lineTo(25,24);
+    ctx.lineTo(24,24);
+    ctx.lineTo(24,25);
+    ctx.lineTo(12,25);
+    ctx.lineTo(12,24);
+    ctx.lineTo(11,24);
+    ctx.lineTo(11,23);
+    ctx.lineTo(12,23);
+    ctx.lineTo(12,21);
+    ctx.lineTo(15,21);
+    ctx.lineTo(15,17);
+    ctx.lineTo(16,17);
+    ctx.lineTo(16,16);
+    ctx.lineTo(17,16);
+    ctx.fillStyle = '#35bb4d';
+    ctx.fill();
+
+    }
+
+    function img() {
+  var img = document.createElement('img');
+  img.setAttribute('src', 'адрес_картинки');
+  document.body.appendChild(img);
+}
+
+	</script>
+	
+	<canvas id='222' height='50' width='50'>
+		<script>
+			var canvas = document.getElementById('222');
+			var ctx = canvas.getContext('2d');
+			canvas.addEventListener('click', up);
+		</script>
+	</canvas>
+</body>
+</html>
